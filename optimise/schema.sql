@@ -1,0 +1,41 @@
+DROP TABLE IF EXISTS user;
+DROP TABLE IF EXISTS post;
+
+CREATE TABLE User (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  last_name TEXT NOT NULL,
+  first_name TEXT NOT NULL,
+  username TEXT UNIQUE NOT NULL,
+  email VARCHAR UNIQUE NOT NULL,
+  device_id VARCHAR(20) UNIQUE NOT NULL,
+  image_file VARCHAR(20) DEFAULT 'funnyCat.jpg',
+  password TEXT NOT NULL,
+  budget FLOAT NOT NULL DEFAULT 1,
+  last_seen TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (id) REFERENCES Stats (user_id),
+  FOREIGN KEY (id) REFERENCES Preference (user_id)
+);
+
+
+CREATE TABLE Stats (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  user_id INTEGER NOT NULL,
+  device_id VARCHAR(20) NOT NULL,
+  date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  temperature FLOAT,
+  humidity FLOAT,
+  light BOOLEAN DEFAULT FALSE,
+  motion BOOLEAN DEFAULT FALSE,
+  current FLOAT,
+  energy FLOAT,
+  energy_prediction FLOAT,
+  FOREIGN KEY (user_id) REFERENCES User (id)
+);
+
+CREATE TABLE Preference (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER NOT NULL,
+    preference_name VARCHAR(20) NOT NULL,
+    preference_value VARCHAR(25) NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES User (id)
+);

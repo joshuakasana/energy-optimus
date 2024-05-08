@@ -1,0 +1,13 @@
+[project]
+name = "optimise"
+version = "1.0.0"
+description = "The energy optimisation app for smart homes built in the Flask."
+dependencies = [
+    "flask",
+    "flask_wtf",
+    "sqlalchemy",
+]
+
+[build-system]
+requires = ["flit_core<4"]
+build-backend = "flit_core.buildapi"

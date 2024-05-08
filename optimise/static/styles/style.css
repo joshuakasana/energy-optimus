@@ -1,0 +1,143 @@
+body {
+    /* background: linear-gradient(90deg, #fcff9e 0%, #c67700 100%); */
+    /* background: linear-gradient(-90deg, #FDBB2D 30%, #22C1C3 70%); */
+    /* background: linear-gradient(180deg, #f8ff00 10%, #3ad59f 100%); */
+    /* blur(4px); */
+    /* background-color: lightgreen; */
+    background: rgb(0,2,7);
+    background: linear-gradient(73deg, rgba(0,2,7,1) 0%, rgba(29,55,69,1) 100%);
+}
+#main-overall{
+    /* background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%); */
+    background: rgb(13, 216, 30);
+    background-color: #ffffff;
+    /* background-color: rgb(50, 82, 123); */
+    /* background: linear-gradient(0deg, rgba(214, 200, 200, 0.56) 0%, rgba(253,187,45,1) 100%); */
+    border-radius: 20px;
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+#main-overall-index{
+    background-image: url("/static/images/index104.jpeg"); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: fit-content;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding-left: 20px;
+    
+}
+
+
+#left-pane {
+    padding-left: 40px;
+    padding-top: 40px;
+}
+
+aside, #aside {
+    background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+    background: linear-gradient(90deg, rgba(227, 255, 231, 0.3) 0%, rgba(217, 231, 255, 0.3) 100%);
+    /* background-color: rgba(0, 0, 255, 0.367); */
+
+    /* border-top-left-radius: 20px; */
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+
+
+.card{
+    border-radius: 20px;
+}
+
+#org-header {
+    color: #660000;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.05);
+    /* border-top-right-radius: 10px; */
+    border-top-left-radius: 10px;   
+}
+
+#org-header a {
+    color: #660000;
+    font-size: 60px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: -15px;
+}
+
+#login-page {
+    padding: 20px;
+}
+
+#mock {
+    padding: 25px;
+}
+
+#mock img {
+    width: 50px;
+    height: fit-content;
+}
+
+#dropdown-menu {
+    transform: translate(220px, 34px) !important;
+}
+
+/* Appliances toggle feature */
+.slider {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+  }
+  
+  .slider input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider label {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+  }
+  
+  .slider label:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  .slider input:checked + label {
+    background-color: #4CAF50;
+  }
+  
+  .slider input:focus + label {
+    box-shadow: 0 0 1px #4CAF50;
+  }
+  
+  .slider input:checked + label:before {
+    -webkit-transform: translateX(14px);
+    -ms-transform: translateX(14px);
+    transform: translateX(14px);
+  }
+  
